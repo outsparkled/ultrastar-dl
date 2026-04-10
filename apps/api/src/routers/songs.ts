@@ -67,7 +67,7 @@ export const songsRouter = new Elysia({
     };
 
     const songDirectoryName = `${dbSong.artist} - ${dbSong.title}`;
-    const songDirectoryPath = join("./songs", songDirectoryName);
+    const songDirectoryPath = join(Bun.env["SONGS_DIRECTORY"]!, songDirectoryName);
 
     try {
       // Broadcast WS message that this song is now being downloaded
