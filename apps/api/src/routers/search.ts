@@ -1,4 +1,4 @@
-import { getLyricsById } from "@ultrastar/ultrastar-api/src/lib/data";
+import { getLyricsById } from "@ultrastar/usdb-api/src/lib/data";
 import { count } from "drizzle-orm";
 import Elysia, { t } from "elysia";
 import { db } from "../db";

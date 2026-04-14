@@ -1,13 +1,13 @@
-# UltraStar karaoke song scrapper 🎤
+# ultrastar-dl
 
-This is a WIP project (that will receive total rewrite at some point in the future) -  UltraStar songs scrapper from [probably the biggest song database](https://usdb.animux.de).
-I've done a [similar project](https://github.com/Martiinii/UltraScrap-cli) in past but I've always had a bigger idea for it and I finally have time and desire to do so.
+This is a song downloader for UltraStar Deluxe. Songs are scraped from [USDB](https://usdb.animux.de), music videos
+are downloaded from YouTube.
 
 ![Screenshot_20250507_222426](https://github.com/user-attachments/assets/09bef9ca-7cb6-4a11-8dbc-ec3597c5669f)
 
 
 ## Download songs metadata with ease
-Head over to http://localhost:3000/download and simply click the button to start seeding database
+Head over to http://localhost:3000/download and simply click the button to start seeding database.
 
 ![Screenshot_20250507_222717](https://github.com/user-attachments/assets/09496862-f7db-475b-b43d-60e429e3876a)
 
@@ -24,7 +24,7 @@ Head over to http://localhost:3000/download and simply click the button to start
 
 This project is using **bun** as package manager alongside **turborepo**.
 I have developed this project using **bun@1.2.4**, but any version above **1.2.4** would do.
-Packages can be found in `/packages` directory with the most notable being `ultrastar-api`.
+Packages can be found in `/packages` directory with the most notable being `usdb-api`.
 
 ## How to run this application?
 
@@ -44,7 +44,7 @@ To run application in development mode use `bun dev` (not recommended for normal
 
 For now, you have to downloads songs by yourself. In the future I will upload default database file, but it is over 200MB (mostly cover images).
 To seed the database by yourself, start the application and head over to `http://localhost:3000/download` and click button to automatically download songs metadata.
-This can take some time (depending on your network speed, CPU, etc. should take between 5 to 20 minutes)
+This can take some time (depending on your network speed, CPU, etc. should take between 5 and 20 minutes)
 After that step is complete, head over to main page and enjoy your songs.
 
 ## What's inside?
@@ -64,7 +64,7 @@ Packages:
 - `@ultrastar/ts-config`: `tsconfig.json`s used throughout the monorepo;
 - `@ultrastar/types`: Custom types used throughout the project like pieces of [TS Reset](https://github.com/total-typescript/ts-reset) or API types;
 - `@ultrastar/ui`: UI design system using [shadcn/ui](https://github.com/shadcn/ui/);
-- `@ultrastar/ultrastar-api`: Scrapper API;
-- `@ultrastar/youtube-api`: Youtube API for downloading and searching videos;
+- `@ultrastar/usdb-api`: USDB Scraper API;
+- `@ultrastar/youtube-api`: YouTube API for downloading and searching videos;
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/) (besides some configs, to be fixed).

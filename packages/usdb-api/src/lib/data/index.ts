@@ -4,7 +4,7 @@ export * from "./songs";
 export * from "./youtubeLinks";
 
 import { parseLyrics } from "../parser/parseLyrics";
-import { scrapLyricsPage } from "../scrapper/lyricsPage";
+import { scrapeLyricsPage } from "../scraper/lyricsPage";
 
 /**
  * Get metadata from html
@@ -21,6 +21,6 @@ export const getMetadata = (html: string) => {
  * @returns Metadata object
  */
 export const getMetadataById = async (id: number) => {
-  const html = await scrapLyricsPage(id);
+  const html = await scrapeLyricsPage(id);
   return getMetadata(html);
 };

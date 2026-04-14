@@ -5,7 +5,7 @@ import config from "../../config.json";
  * @param id ID of song
  * @returns HTML
  */
-export const scrapSongPage = async (id: number) => {
+export const scrapeSongPage = async (id: number) => {
   const url = `${config.apiUrl}/?link=detail&id=${id}`;
   const response = await fetch(url);
   const html = await response.text();

@@ -1,7 +1,7 @@
 import {
   getCoverImage,
   songGenerator,
-} from "@ultrastar/ultrastar-api/src/lib/data";
+} from "@ultrastar/usdb-api/src/lib/data";
 import { eq } from "drizzle-orm";
 import Elysia from "elysia";
 import { readdir } from "node:fs/promises";

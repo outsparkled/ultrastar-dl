@@ -1,5 +1,5 @@
 import { parseSongsFromSearch } from "../parser/parseSongsFromSearch";
-import { scrapSearchPage } from "../scrapper/searchPage";
+import { scrapeSearchPage } from "../scraper/searchPage";
 
 /**
  * Song generator from searchPage
@@ -23,5 +23,5 @@ export const songGenerator = async function* (initialPage = 1) {
  * @returns Page object
  */
 export const getSongsFromPage = async (page: number) => {
-  return parseSongsFromSearch(await scrapSearchPage(page));
+  return parseSongsFromSearch(await scrapeSearchPage(page));
 };

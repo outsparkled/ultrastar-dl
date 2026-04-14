@@ -1,7 +1,7 @@
 import {
   getLyricsById,
   getYoutubeLinksById,
-} from "@ultrastar/ultrastar-api/src/lib/data";
+} from "@ultrastar/usdb-api/src/lib/data";
 import {
   downloadYoutubeVideoFromLink,
   searchYoutube,

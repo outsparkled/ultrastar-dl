@@ -1,5 +1,5 @@
 import { parseLyrics } from "../parser/parseLyrics";
-import { scrapLyricsPage } from "../scrapper/lyricsPage";
+import { scrapeLyricsPage } from "../scraper/lyricsPage";
 
 /**
  * Get lyrics from html
@@ -16,6 +16,6 @@ export const getLyrics = (html: string) => {
  * @returns Object with lyrics, metadata and headers
  */
 export const getLyricsById = async (id: number) => {
-  const html = await scrapLyricsPage(id);
+  const html = await scrapeLyricsPage(id);
   return getLyrics(html);
 };

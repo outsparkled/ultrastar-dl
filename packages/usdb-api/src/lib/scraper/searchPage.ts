@@ -4,7 +4,7 @@ import { loggedFetcher } from "../login/login";
 const LIMIT_PER_PAGE = 100;
 
 /**
- * Generates form body for {@link scrapSearchPage}
+ * Generates form body for {@link scrapeSearchPage}
  * @param page Page number to generate form body for
  * @returns Form data with order and limit & start generated based on given page
  */
@@ -20,10 +20,10 @@ const generateSearchFormBody = (page: number) => {
 
 /**
  * Scrapes search page with table of songs
- * @param page Page number to scrap data for
+ * @param page Page number to scrape data for
  * @returns HTML
  */
-export const scrapSearchPage = async (page: number) => {
+export const scrapeSearchPage = async (page: number) => {
   const url = `${config.apiUrl}/?link=list`;
   const searchFormBody = generateSearchFormBody(page);
 

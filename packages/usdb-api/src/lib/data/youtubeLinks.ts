@@ -1,5 +1,5 @@
 import { parseYoutubeLinks } from "../parser/parseYoutubeLinks";
-import { scrapSongPage } from "../scrapper/songPage";
+import { scrapeSongPage } from "../scraper/songPage";
 
 /**
  * Gets all youtube links from comments for provided song
@@ -16,6 +16,6 @@ export const getYoutubeLinks = (html: string) => {
  * @returns Array of objects with createdAt and link fields
  */
 export const getYoutubeLinksById = async (id: number) => {
-  const html = await scrapSongPage(id);
+  const html = await scrapeSongPage(id);
   return getYoutubeLinks(html);
 };
